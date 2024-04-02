@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation and Destinations</title>
+    
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="home.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </div>    
+
+    <header>
+        <h1>FIELD EXPERTS</h1>
+    </header>
+
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="searchContent()">Search</button>
+
+    <section>
+        <!-- Your card content here -->
+    </section>
+
+    <script>
+        // Function to toggle the visibility of dropdown content
+        function toggleDropdown(cardId, dropdownId) {
+            var dropdownContent = document.getElementById(dropdownId);
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Function to toggle the visibility of sub-dropdown content
+        function toggleSubDropdown(cardId, subDropdownId) {
+            var subDropdownContent = document.getElementById(subDropdownId);
+            subDropdownContent.style.display = (subDropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Add click event listeners to toggle dropdowns
+        document.getElementById('hotelCard').addEventListener('click', function() {
+            toggleDropdown('hotelCard', 'hotelDropdown');
+        });
+
+        // Add more click event listeners as needed
+
+        // Add click event listeners to toggle sub-dropdowns
+        document.getElementById('hotelDropdown').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click event from propagating to the parent card
+            toggleSubDropdown('hotelDropdown', 'hotelSubDropdown');
+        });
+
+        // Add more event listeners as needed
+
+        // Function to search content
+        function searchContent() {
+            var input, filter, cards, card, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName('card');
+
+            for (i = 0; i < cards.length; i++) {
+                card = cards[i];
+                txtValue = card.textContent || card.innerText;
+
+                // If the text content of the card matches the search query, display it, otherwise hide it
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

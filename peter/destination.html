@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation and Destinations</title>
+    
+    <style>
+        body {
+            background-image: url("field.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+          
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        select {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .dropdown-content, .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+            z-index: 1;
+        }
+
+        .sub-dropdown-content {
+            top: 100%;
+            left: 0;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 3000;
+            height: 900px;
+            z-index: -1;
+        }
+
+        .footer-arrow a {
+    text-decoration: none;
+    color: white;
+}
+
+.back-arrow {
+    text-align: left;
+}
+
+.next-arrow {
+    text-align: right;
+}
+.top-bar {
+    background-color: black; /* Background color of the top bar */
+    text-decoration: white; /* Text color */
+    padding: 10px; /* Add padding for better spacing */
+    position: fixed; /* Fixed position to stick to the top */
+    top: 0; /* Position at the top */
+    width: 100%; /* Occupy full width of the page */
+    z-index: 999; /* Set z-index to ensure it's above other content */
+}
+
+ 
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <a href="home.html">Home</a>
+        <a href="packages.html">Packages</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        </div>    
+    
+
+    <header>
+        <h1>FIELD EXPERTS</h1>
+
+        
+
+    
+    </header>
+
+    <section>
+        <div class="card" id="hotelCard">
+            <img src="cows.jpg" alt="Accommodation 1">
+            <div class="card-content">
+                <h2>VETERINARY</h2>
+                
+                <select>
+                    <option value="single">cows</option>
+                    <option value="double">Dogs</option>
+                    <option value="suite">Birds</option>
+                    <option value="studio">Horses</option>
+                </select>
+                <a href="billing.html">Book Now</a>
+            </div>
+            <div class="dropdown-content" id="hotelDropdown">
+                <p>Additional information about hotel rooms.</p>
+                <div class="sub-dropdown-content" id="hotelSubDropdown">
+                    <p>Additional details about the hotel facilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="resortCard">
+            <img src="field.jpg" alt="Accommodation 2">
+            <div class="card-content">
+                <h2>SOIL TESTING</h2>
+                
+                <select>
+                    <option value="standard">Soil acidity</option>
+                    <option value="villa">Soil alkaline</option>
+                </select>
+                <a href="billing.html">Book Now</a>
+            </div>
+            <div class="dropdown-content" id="resortDropdown">
+                <p>Additional information about resort rooms.</p>
+                <div class="sub-dropdown-content" id="resortSubDropdown">
+                    <p>Details about resort amenities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+
+        <div class="card" id="cityCard">
+            <img src="farm.jpg" alt="Destination 1">
+            <div class="card-content">
+                <h2>Consultation</h2>
+                
+            </div>
+            <div class="dropdown-content" id="cityDropdown">
+                <p>Explore the attractions of the city.</p>
+                <div class="sub-dropdown-content" id="citySubDropdown">
+                    <p>Guided tours and local activities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="beachCard">
+            <img src="cows.jpg" alt="Destination 2">
+            <div class="card-content">
+                <h2>Weather expert</h2>
+                <p>Description of the beach destination.</p>
+                <a href="prompt.html">Explore</a>
+            </div>
+            <div class="dropdown-content" id="beachDropdown">
+                <p>Discover the beauty of the beach destination.</p>
+                <div class="sub-dropdown-content" id="beachSubDropdown">
+                    <p>Water sports and relaxation options.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="hotelCard">
+            <img src="farm.jpg" alt="Accommodation 1">
+            <div class="card-content">
+                <h2>Approved shops</h2>
+                <p>Description of the transportatio.</p>
+                <select>
+                    <option value="private">Nairobi</option>
+                    <option value="public">Nakuru</option>
+                    <option value="flight">Eldoret</option>
+                    <option value="train">Kisumu</option>
+                </select>
+                <a href="billing.html">Book Now</a>
+            </div>
+            <div class="dropdown-content" id="transportationDropdown">
+                <p>Additional information about transportation.</p>
+                <div class="sub-dropdown-content" id="transportationSubDropdown">
+                    <p>Additional details about the transport experience.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    
+
+    <script>
+        // Function to toggle the visibility of dropdown content
+        function toggleDropdown(cardId, dropdownId) {
+            var dropdownContent = document.getElementById(dropdownId);
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Function to toggle the visibility of sub-dropdown content
+        function toggleSubDropdown(cardId, subDropdownId) {
+            var subDropdownContent = document.getElementById(subDropdownId);
+            subDropdownContent.style.display = (subDropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
+
+        // Add click event listeners to toggle dropdowns
+        document.getElementById('hotelCard').addEventListener('click', function() {
+            toggleDropdown('hotelCard', 'hotelDropdown');
+        });
+
+        document.getElementById('resortCard').addEventListener('click', function() {
+            toggleDropdown('resortCard', 'resortDropdown');
+        });
+
+        document.getElementById('cityCard').addEventListener('click', function() {
+            toggleDropdown('cityCard', 'cityDropdown');
+        });
+
+        document.getElementById('beachCard').addEventListener('click', function() {
+            toggleDropdown('beachCard', 'beachDropdown');
+        });
+
+        // Add click event listeners to toggle sub-dropdowns
+        document.getElementById('hotelDropdown').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click event from propagating to the parent card
+            toggleSubDropdown('hotelDropdown', 'hotelSubDropdown');
+        });
+
+        document.getElementById('resortDropdown').addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleSubDropdown('resortDropdown', 'resortSubDropdown');
+        });
+
+        document.getElementById('cityDropdown').addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleSubDropdown('cityDropdown', 'citySubDropdown');
+        });
+
+        document.getElementById('beachDropdown').addEventListener('click', function(event) {
+            event.stopPropagation();
+            toggleSubDropdown('beachDropdown', 'beachSubDropdown');
+        });
+    </script>
+
+</body>
+</html>
+

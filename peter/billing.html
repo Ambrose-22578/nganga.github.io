@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website Billing</title>
+    <style>
+        body {
+            background-image: url("mountain2.jpeg");
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tourism Website Billing</h1>
+    </header>
+
+    <form>
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" name="customerName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+            <option value="paris">Paris</option>
+            <optgroup label="Cities in France">
+                <option value="nice">Nice</option>
+                <option value="lyon">Lyon</option>
+            </optgroup>
+        
+            <option value="rome">Rome</option>
+            <optgroup label="Cities in Italy">
+                <option value="florence">Florence</option>
+                <option value="milan">Milan</option>
+            </optgroup>
+        
+            <option value="tokyo">Tokyo</option>
+            <optgroup label="Cities in Japan">
+                <option value="osaka">Osaka</option>
+                <option value="kyoto">Kyoto</option>
+            </optgroup>
+            <!-- Add more destination options as needed -->
+        </select>
+        
+
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" name="departureDate" required>
+
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" name="returnDate" required>
+
+        <label for="numberOfTravelers">Number of Travelers:</label>
+        <input type="number" id="numberOfTravelers" name="numberOfTravelers" min="1" required>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <!-- Add more payment method options as needed -->
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

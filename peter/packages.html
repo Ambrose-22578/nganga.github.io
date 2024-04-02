@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Services</title>
+    <a href="home.html">Home</a>
+    <a href="destination.html">Destination</a>
+    <a href="AboutUs.html">AboutUs</a>
+    <a href="contact.html">Contacts</a>
+    <style>
+        body {
+            background-image: url("farm.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .package {
+            width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .package img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package-content {
+            padding: 15px;
+        }
+
+        .package-content h2 {
+            margin-top: 0;
+        }
+
+        .package-content p {
+            margin: 10px 0;
+        }
+
+        .details-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .details {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-arrow a {
+    text-decoration: none;
+    color: white;
+}
+
+.back-arrow {
+    text-align: left;
+}
+
+.next-arrow {
+    text-align: right;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tour Packages</h1>
+    
+    </header>
+
+    <section>
+        <div class="package" id="package1">
+            <img src="maize.jpg" alt="Package 1">
+            <div class="package-content">
+                <h2>AGRICULTURAL SHOWS</h2>
+                <p>Description: Embark on agriculture education and training.</p>
+                <p>Duration: 7 days</p>
+                
+                <p>Price: KSH 1500 per person</p>
+                <a href="#" class="details-btn" onclick="showDetails('package1')">View Details</a>
+            </div>
+        </div>
+
+        <div class="package" id="package2">
+            <img src="cows.jpg" alt="Package 2">
+            <div class="package-content">
+                <h2>EDUCATIONAL PODCASTS</h2>
+                <p>Description: Easy and fastest way to educate yourself through our podcast.</p>
+                
+                <a href="#" class="details-btn" onclick="showDetails('package2')">View Details</a>
+            </div>
+        </div>
+
+        <div class="package" id="package3">
+            <img src="field.jpg" alt="Package 3">
+            <div class="package-content">
+                <h2>FULL CONSOLTATION</h2>
+                <p>Description: Spend enough time with our expert.</p>
+                <p>Duration:  days</p>
+                
+                
+                <p>Price: Ksh 5000 per person</p>
+                <a href="#" class="details-btn" onclick="showDetails('package3')">View Details</a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="details" id="details-package1" style="display: none;">
+        <h2>Adventure in the Mountains - Details</h2>
+        <p><strong>Itinerary:</strong> A detailed itinerary will be provided upon booking confirmation.</p>
+        <p><strong>Accommodation:</strong> Stay in cozy mountain lodges with stunning views.</p>
+        <p><strong>Inclusions:</strong> Hiking guides, all meals, transportation between destinations.</p>
+        <p><strong>Exclusions:</strong> Personal expenses, alcoholic beverages.</p>
+        <a href="#" onclick="hideDetails('package1')">Close Details</a>
+    </div>
+
+    <div class="details" id="details-package2" style="display: none;">
+        <h2>Coastal Retreat - Details</h2>
+        <p><strong>Itinerary:</strong> Enjoy leisurely days on the beach and explore coral reefs.</p>
+        <p><strong>Accommodation:</strong> Luxurious beachfront resorts with modern amenities.</p>
+        <p><strong>Inclusions:</strong> Snorkeling equipment, beach activities, meals.</p>
+        <p><strong>Exclusions:</strong> Airfare, optional excursions.</p>
+        <a href="#" onclick="hideDetails('package2')">Close Details</a>
+    </div>
+
+    <div class="details" id="details-package3" style="display: none;">
+        <h2>Desert Adventure - Details</h2>
+        <p><strong>Itinerary:</strong> Enjoy leisurely days on the desert and explore the nature.</p>
+        <p><strong>Accommodation:</strong> Luxurious desert caves with modern amenities.</p>
+        <p><strong>Inclusions:</strong> track-racing, more desert activities, meals.</p>
+        <p><strong>Exclusions:</strong> optional excursions.</p>
+        <a href="#" onclick="hideDetails('package3')">Close Details</a>
+    </div>
+
+    <footer>
+        #TRAVEL WITH US!!!
+    </footer>
+
+    <script>
+        function showDetails(packageId) {
+            document.getElementById('details-' + packageId).style.display = 'block';
+        }
+
+        function hideDetails(packageId) {
+            document.getElementById('details-' + packageId).style.display = 'none';
+        }
+    </script>
+
+</body>
+<footer>
+        
+    
+    <div class="back-arrow">
+        <a href="destination.html">&#8592; </a>
+    </div>
+    <div class="next-arrow">
+        <a href="AboutUs.html">&#8594;</a>
+    </div>
+</footer>
+</html>
